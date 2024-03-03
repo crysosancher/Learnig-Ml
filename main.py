@@ -1,11 +1,16 @@
-from transformers import AutoTokenizer, AutoModelForTokenClassification
-from transformers import pipeline
+from transformers import AutoModelForQuestionAnswering, AutoTokenizer, pipeline
 
-tokenizer = AutoTokenizer.from_pretrained("dslim/bert-base-NER")
-model = AutoModelForTokenClassification.from_pretrained("dslim/bert-base-NER")
+model_name = "deepset/roberta-base-squad2"
 
-nlp = pipeline("ner", model=model, tokenizer=tokenizer)
-example = "My name is Clara and I live in Berkeley, California"
+# a) Get predictions
+nlp = pipeline('question-answering', model=model_name, tokenizer=model_name)
+QA_input = {
+    'question': 'Where the milk comes from ?',
+    'context': "Milk comes out of cow"
+}
+res = nlp(QA_input)
+print("Predicted Answer:", res)
 
-ner_results = nlp(example)
-print(ner_results)
+# b) Load model & tokenizer
+model = AutoModelForQuestionAnswering.from_pretrained(model_name)
+tokenizer = AutoTokenizer.from_pretrained(model_name)
