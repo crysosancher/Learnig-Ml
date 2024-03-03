@@ -1,0 +1,18 @@
+[
+	{
+		"entity": "B-PER",
+		"score": 0.9990139,
+		"index": 4,
+		"word": "Wolfgang",
+		"start": 11,
+		"end": 19
+	},
+	{
+		"entity": "B-LOC",
+		"score": 0.999645,
+		"index": 9,
+		"word": "Berlin",
+		"start": 34,
+		"end": 40
+	}
+]

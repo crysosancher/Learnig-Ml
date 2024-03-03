@@ -1,0 +1,26 @@
+[
+	{
+		"entity": "B-PER",
+		"score": 0.9964224,
+		"index": 4,
+		"word": "Clara",
+		"start": 11,
+		"end": 16
+	},
+	{
+		"entity": "B-LOC",
+		"score": 0.9966516,
+		"index": 9,
+		"word": "Berkeley",
+		"start": 31,
+		"end": 39
+	},
+	{
+		"entity": "B-LOC",
+		"score": 0.99936527,
+		"index": 11,
+		"word": "California",
+		"start": 41,
+		"end": 51
+	}
+]
